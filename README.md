@@ -1,0 +1,3 @@
+# CSS calc() Unit Incompatibility Bug
+
+This repository demonstrates a common error encountered when using the CSS `calc()` function: incompatibility between different units.  The `bug.css` file shows the incorrect usage, while `bugSolution.css` provides the corrected version.  The issue arises from trying to directly add or subtract units that the browser cannot reconcile (like pixels and percentages).
