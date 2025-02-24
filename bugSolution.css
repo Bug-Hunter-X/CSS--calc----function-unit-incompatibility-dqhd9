@@ -1,0 +1,23 @@
+To fix the issue, ensure that the units within the `calc()` function are compatible and consistent.   Avoid mixing relative units (like percentages) with absolute units (like pixels) directly within a single `calc()` expression.  If you need to combine different units, you might need to adjust your approach.  For example, if you're trying to calculate a width, you may want to use a percentage for the primary width and add a fixed pixel value separately, or use variables to represent these values and do the calculation beforehand.
+
+Here's an example of how to correct the code:
+
+```css
+/* bug.css (Incorrect) */
+.element {
+  width: calc(50% + 100px); /* Incorrect: Mixing percentages and pixels */
+}
+
+/* bugSolution.css (Correct) */
+.element {
+  width: 50%;
+  margin-left: 100px;
+}
+/* or 
+.element {
+  width: calc(50% + 100px);
+}
+*/
+```
+
+In the corrected version, we've separated the percentage and pixel values, so they won't conflict within the `calc()` function.   In some cases, if it can be solved using the correct mathematical expression you may also do so.
